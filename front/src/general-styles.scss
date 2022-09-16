@@ -1,0 +1,154 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: local('Ubuntu-Medium'), url('./assets/fonts/Ubuntu-Medium.woff2') format('woff2'),
+    url('./assets/fonts/Ubuntu-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: local('Ubuntu-Regular'), url('./assets/fonts/Ubuntu-Regular.woff2') format('woff2'),
+    url('./assets/fonts/Ubuntu-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: local('Ubuntu-Bold'), url('./assets/fonts/Ubuntu-Bold.woff2') format('woff2'),
+    url('./assets/fonts/Ubuntu-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: local('WorkSans-Bold'), url('./assets/fonts/WorkSans-Bold.woff2') format('woff2'),
+    url('./assets/fonts/WorkSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: local('WorkSans-Bold'), url('./assets/fonts/WorkSans-Regular.woff2') format('woff2'),
+    url('./assets/fonts/WorkSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: local('WorkSans-SemiBold'), url('./assets/fonts/WorkSans-SemiBold.woff2') format('woff2'),
+    url('./assets/fonts/WorkSans-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: local('WorkSans-Light'), url('./assets/fonts/WorkSans-Light.woff2') format('woff2'),
+    url('./assets/fonts/WorkSans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: local('WorkSans-Medium'), url('./assets/fonts/WorkSans-Medium.woff2') format('woff2'),
+    url('./assets/fonts/WorkSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'WorkSans', sans-serif;
+}
+
+
+input {
+  &:focus {
+    outline-color: #A0C3FF;
+  }
+}
+
+button {
+  &:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), #116ACC;
+  }
+
+  &:active {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #116ACC;
+  }
+}
+
+.btn {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.color-minus {
+  color: #FD4E5D;
+}
+
+.color-plus {
+  color: #76CA66;
+}
+
+.border-color-plus {
+  border-bottom: 1px dotted #76CA66;
+}
+
+.border-color-minus {
+  border-bottom: 1px dotted #FD4E5D;
+}

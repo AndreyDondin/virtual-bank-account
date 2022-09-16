@@ -1,0 +1,219 @@
+@media (max-width: 1200px) {
+  .currency {
+    &__box-wrap {
+      flex-direction: column;
+    }
+
+    &__left-box {
+      width: 100%;
+    }
+
+    &__right-box {
+      width: 100%;
+    }
+
+    &__box {
+      margin-bottom: 20px;
+
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .info {
+    &__tabel-td {
+      padding: 10px;
+    }
+
+    &__table-th {
+      padding: 10px;
+    }
+  }
+}
+
+@media (max-width: 830px) {
+  .header {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__item {
+      padding: 5px;
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .accounts {
+    &__up-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &__btn {
+      margin-left: 0;
+    }
+  }
+
+  .currency {
+    padding: 10px;
+
+    &__select {
+      margin-right: 10px;
+      padding: 3px;
+    }
+  }
+
+  .info {
+    padding: 10px;
+
+    &__table-container {
+      padding: 15px;
+    }
+
+    &__tabel-td {
+      padding: 10px;
+    }
+
+    &__table-th {
+      padding: 10px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &__block-left {
+      padding: 20px;
+
+    }
+
+    &__block-right {
+      padding: 20px;
+    }
+
+    &__block-input {
+      width: 100%;
+    }
+
+    &__block-subject {
+      margin-bottom: 10px;
+      line-height: 20px;
+    }
+
+    &__tabel-td {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    &__diagram-info-wrap {
+      display: none;
+    }
+
+    &__diagram-container {
+      overflow: auto;
+    }
+  }
+}
+
+@media (max-width: 630px) {
+
+
+  .info {
+
+    &__tabel-td {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+
+    &__table-container {
+      overflow: auto;
+    }
+
+    &__block-left {
+      width: 100%;
+    }
+
+
+    &__sub {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .header {
+    &__container {
+      padding: 10px
+    }
+  }
+
+  .login {
+    padding: 25px;
+
+    &__container {
+      padding: 25px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      padding-left: 0;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  .accounts {
+    padding: 10px;
+
+    &__card {
+      padding: 10px;
+      min-width: 300px;
+    }
+  }
+
+  .atm {
+    padding: 10px;
+
+    &__title {
+      margin-bottom: 20px;
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+
+  .currency {
+
+    &__box {
+      padding: 20px;
+    }
+
+    &__right-box {
+      padding: 20px;
+    }
+
+    &__separator-tabel {
+      width: 30%;
+    }
+
+    &__form {
+      flex-direction: column;
+    }
+
+    &__wrap {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 15px;
+      }
+    }
+
+    &__btn {
+      padding: 15px 15px;
+    }
+  }
+}

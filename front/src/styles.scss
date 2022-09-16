@@ -1,0 +1,954 @@
+@import '~normalize.css';
+@import 'general-styles.scss';
+@import '_colors.scss';
+
+.container {
+  margin: 0 auto;
+  max-width: 1460px;
+  width: 100%;
+}
+
+
+.modal {
+  display: block;
+  padding-top: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+
+  &__container {
+    margin: 0 auto;
+    display: flex;
+    padding: 20px;
+    width: fit-content;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid $color-blue;
+    background: $color-white-gray;
+
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    color: crimson;
+  }
+
+  &__message {
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    padding: 15px 40px;
+    width: fit-content;
+    font-weight: 700;
+    color: $color-white;
+    background: $color-blue;
+    border-radius: 15px;
+  }
+}
+
+.header {
+  background: $color-blue;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+
+  &__container {
+    margin: 0 auto;
+    max-width: 1460px;
+    width: 100%;
+    display: flex;
+    padding: 25px 50px;
+    justify-content: space-between;
+
+  }
+
+  &__logo {
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 56px;
+    color: $color-white;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 14px 24px;
+    background: #FFFFFF;
+    border: 2px solid $color-blue;
+    border-radius: 7px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-blue;
+
+
+    &:hover {
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), #116ACC;
+    }
+
+    &:active {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #116ACC;
+    }
+
+  }
+
+  &__item--active {
+    background: #A0C3FF;
+  }
+}
+
+.login {
+  padding-top: 262px;
+
+  &__container {
+    margin: 0 auto;
+    padding: 50px 85px 50px 50px;
+    max-width: 500px;
+    background: $color-white-gray;
+    border-radius: 50px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    padding-left: 65px;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    color: $color-black;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__subject {
+    margin-right: 18px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-light-black;
+  }
+
+  &__subject--margin-password {
+    margin-left: -10px;
+  }
+
+  &__input {
+    padding: 8px 10px 8px 16px;
+    width: calc(100% - 80px);
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-black;
+    border: 1px solid #9CA3AF;
+    border-radius: 7px;
+
+    &::placeholder {
+      color: #6B7280
+    }
+  }
+
+  &__label {
+    position: relative;
+    margin-bottom: 30px;
+
+  }
+
+  &__button {
+    padding: 14px 21px;
+    margin-left: 65px;
+    width: fit-content;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-white;
+    background: $color-blue;
+    border-radius: 7px;
+  }
+
+  &__tooltip-text {
+    position: absolute;
+    right: -70px;
+    bottom: -10px;
+    padding: 5px;
+    width: 70px;
+    font-size: 9px;
+    line-height: 14px;
+    color: $color-white;
+    text-align: center;
+    background-color: $color-black;
+    z-index: 1;
+  }
+
+  &__tooltip-text::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent $color-black transparent transparent;
+  }
+
+}
+
+.accounts {
+  padding: 50px;
+
+  &__title {
+    margin-right: 35px;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    color: $color-black;
+  }
+
+  &__select {
+    padding: 11px 16px;
+    height: max-content;
+    font-family: 'Ubuntu';
+    font-size: 16px;
+    line-height: 24px;
+    color: #374151;
+    background: $color-white;
+    border: 1px solid $color-blue;
+    border-radius: 7px;
+  }
+
+  &__btn {
+    margin-left: auto;
+    padding: 16px 24px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-white;
+    background: $color-blue;
+    border-radius: 7px;
+
+
+    &:hover {
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), #116ACC;
+    }
+
+    &:active {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #116ACC;
+    }
+
+  }
+
+  &__up-container {
+    display: flex;
+    margin-bottom: 50px;
+    align-items: flex-start;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  &__card {
+    display: flex;
+    padding: 22px;
+    flex-direction: column;
+    min-width: 400px;
+    background: $color-white;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    // cursor: grab;
+
+    // &:active {
+    //   cursor: grabbing;
+    // }
+
+  }
+
+  &__card-subject {
+    margin-bottom: 9px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $color-light-black;
+  }
+
+  &__card-sub {
+    margin-bottom: 9px;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-light-black;
+  }
+
+  &__card-bottom-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__card-date-text {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 15px;
+    color: $color-black;
+  }
+
+  &__card-date {
+    font-weight: 400;
+  }
+
+  &__card-btn {
+    padding: 16px 24px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-white;
+    background: $color-blue;
+    border-radius: 7px;
+
+    &:hover {
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), #116ACC;
+    }
+
+    &:active {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #116ACC;
+    }
+  }
+}
+
+.info {
+  padding: 50px;
+
+  &__extra-container {
+    display: flex;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    color: $color-black;
+  }
+
+  &__sub {
+    font-size: 34px;
+    line-height: 40px;
+    color: $color-black;
+  }
+
+  &__btn-icon {
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  &__btn {
+    display: block;
+    margin-bottom: 30px;
+    padding: 16px 24px;
+    width: 100%;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-white;
+    background: $color-blue;
+    border: none;
+    border-radius: 7px;
+
+    &:hover {
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), #116ACC;
+    }
+
+    &:active {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #116ACC;
+    }
+  }
+
+  &__text {
+    margin-right: 50px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: $color-black;
+  }
+
+  &__text-sub {
+    font-size: 20px;
+    line-height: 23px;
+    color: $color-black;
+  }
+
+  &__block-left {
+    height: fit-content;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 25px 50px;
+    background: $color-white-gray;
+    border-radius: 50px;
+  }
+
+  &__block-right {
+    display: block;
+    padding: 25px 50px 20px 50px;
+
+    background: $color-white;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+  }
+
+  &__block-title {
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: $color-black;
+  }
+
+  &__block-form {
+    display: flex;
+  }
+
+  &__img {
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    width: 10%;
+  }
+
+  &__block-wrap {
+    display: flex;
+    flex-direction: column;
+
+
+    &:first-child {
+      margin-right: 18px;
+      align-items: flex-end;
+    }
+
+    &:last-child {
+      align-items: flex-start;
+    }
+  }
+
+  &__block-subject {
+    margin-bottom: 25px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 35px;
+    color: $color-light-black;
+  }
+
+  &__block-input {
+    margin-bottom: 25px;
+    padding: 8px 16px;
+    width: 300px;
+    border: 1px solid #9CA3AF;
+    border-radius: 7px;
+  }
+
+  &__block-btn {
+    padding: 16px 24px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-white;
+    background: $color-blue;
+    border-radius: 7px;
+  }
+
+  &__diagram-container {
+    display: flex;
+  }
+
+  &__diagram-info-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__diagram {
+    margin-right: 24px;
+    border: 1px solid $color-black;
+  }
+
+  &__diagramm-text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: $color-black;
+  }
+
+  &__table-container {
+    padding: 25px 50px;
+    background: #F3F4F6;
+    border-radius: 56px;
+  }
+
+  &__table {
+    width: 100%;
+    border-spacing: 0;
+    cursor: pointer;
+  }
+
+  &__thead {
+    width: 100%;
+    background: $color-blue;
+  }
+
+  &__table-th {
+    padding: 20px 49px;
+    text-align: start;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-white;
+
+    &:first-child {
+      width: 20%;
+      border-radius: 15px 0 0 15px;
+    }
+
+    &:nth-child(2) {
+      width: 20%;
+    }
+
+    &:nth-child(3) {
+      width: 15%;
+    }
+
+    &:last-child {
+      border-radius: 0 15px 15px 0;
+    }
+  }
+
+  &__table-tr {
+    border-bottom: 2px solid rgba(0, 82, 255, 0.1);
+
+  }
+
+  &__tabel-td {
+    padding: 21px 49px 26px 49px;
+    font-family: 'Ubuntu';
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: 2px solid rgba(0, 82, 255, 0.1);
+  }
+}
+
+.history {
+  padding: 50px;
+
+  &__pagination-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__pagination-item {
+    padding: 10px;
+    border: 1px solid $color-blue;
+    cursor: pointer;
+
+
+    &:not(:last-child) {
+      border-right: transparent
+    }
+  }
+
+  &__pagination-item--active {
+    color: $color-white;
+    background-color: $color-blue;
+    cursor: default;
+  }
+
+}
+
+.history .info__diagram-link {
+  display: block;
+  margin-bottom: 50px;
+}
+
+.history .info__block-right {
+  margin-bottom: 50px;
+}
+
+.history .info__table-container {
+  margin-bottom: 50px;
+}
+
+.history .info__table {
+  cursor: default;
+}
+
+
+.highcharts-exporting-group,
+.highcharts-credits {
+  display: none;
+}
+
+.autocomplete-items {
+  position: absolute;
+  top: 21%;
+  right: 8%;
+  width: 300px;
+  max-height: 300px;
+  border: 1px solid $color-light-black;
+
+  border-bottom: none;
+  overflow-y: auto;
+  z-index: 99;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: $color-white-gray;
+  border-bottom: 1px solid $color-light-black;
+}
+
+.autocomplete-items div:hover {
+  background-color: $color-white-gray;
+}
+
+.atm {
+  padding: 50px;
+
+  &__title {
+    margin-bottom: 56px;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    color: $color-black;
+  }
+
+  &__map {
+    width: 100%;
+    height: 70vh;
+  }
+}
+
+.currency {
+  padding: 50px;
+
+  &__title {
+    margin-bottom: 56px;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    color: $color-black;
+  }
+
+  &__box-wrap {
+    display: flex;
+  }
+
+  &__left-box {
+    margin-right: 49px;
+    width: 40%;
+  }
+
+  &__right-box {
+    padding: 50px;
+    width: 60%;
+    background: #E5E5E5;
+    border-radius: 50px;
+  }
+
+  &__box {
+    padding: 50px;
+    background: $color-white;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+
+    &:first-child {
+      margin-bottom: 44px;
+    }
+  }
+
+  &__caption {
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: $color-black;
+  }
+
+  &__code-currency {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    color: $color-black;
+  }
+
+  &__separator {
+    margin: 0 5px;
+    width: 100%;
+    border-bottom: 1px dotted $color-black;
+  }
+
+  &__value-currency {
+    font-size: 20px;
+    line-height: 23px;
+    color: $color-black;
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form-wrap {
+    margin-right: 25px;
+    width: 100%;
+  }
+
+  &__wrap {
+    display: flex;
+    margin-bottom: 33px;
+    align-items: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    margin-right: 20px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-black;
+  }
+
+  &__select {
+    margin-right: 20px;
+    padding: 8px 16px;
+    width: 100%;
+    background: $color-white;
+    border: 1px solid #9CA3AF;
+    border-radius: 7px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__input {
+    padding: 8px 16px;
+    width: 100%;
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-black;
+    background: $color-white;
+    border: 1px solid #9CA3AF;
+    border-radius: 7px;
+  }
+
+  &__btn {
+    padding: 47px 13px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-white;
+    background: $color-blue;
+    border-radius: 7px;
+  }
+
+  &__value-wrap {
+    display: flex;
+    width: 10%;
+    justify-content: space-between;
+  }
+
+  &__separator-tabel {
+    margin: 0 5px;
+    width: 100%;
+
+  }
+
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hide {
+  color: transparent;
+}
+
+@mixin gradient {
+  background-image: linear-gradient(-45deg, #E2E2E2, rgba(255, 255, 255, .2), #E2E2E2);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+.skeleton {
+  @include gradient;
+
+  &__container {
+    display: flex;
+    padding: 25px 50px;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    border-radius: 7px;
+    @include gradient;
+  }
+
+  &__header,
+  &__select {
+    margin-bottom: 25px;
+    margin-right: 25px;
+    width: 200px;
+    height: 50px;
+    background-color: $color-white;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  &__item {
+    width: 100px;
+    height: 50px;
+    background-color: $color-white-gray;
+    border-radius: 7px;
+  }
+
+  &__btn {
+    width: 150px;
+    height: 50px;
+    background-color: $color-white;
+    border-radius: 7px;
+  }
+
+  &__up-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 50px;
+    justify-content: space-between;
+  }
+
+  &__card {
+    padding: 15px;
+    width: 330px;
+    height: 200px;
+
+    @include gradient;
+  }
+
+  &__card-subject {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 20px;
+    background-color: $color-white;
+  }
+
+  &__section {
+    padding: 50px;
+    @include gradient;
+  }
+
+  &__box {
+    margin-right: 20px;
+    width: 40%;
+    height: 300px;
+    border-radius: 50px;
+    @include gradient;
+  }
+
+  &__table {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 500px;
+    border-radius: 50px;
+    @include gradient;
+  }
+
+  &__container-col {
+    display: flex;
+    width: 80%;
+    height: 800px;
+    flex-direction: column;
+  }
+
+  &__container-col .skeleton__box {
+    margin-bottom: 30px;
+    width: 90%;
+
+    &:first-child {
+      height: 500px;
+    }
+  }
+
+  &__up-container .skeleton__table {
+    height: 800px;
+  }
+}
+
+.hovered {
+  border-radius: 20px;
+  background-color: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  transition: all 0.3s ease-in-out;
+}
+
+.card--hide {
+  opacity: 0.5;
+}
